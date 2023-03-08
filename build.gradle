@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.54'
+    implementation group: 'org.bitcoinj', name: 'bitcoinj-core', version: '0.14.4'
+    implementation group: 'org.web3j', name: 'core', version: '4.3.0'
+    implementation group: 'org.web3j', name: 'utils', version: '4.3.0'
+    implementation group: 'org.web3j', name: 'crypto', version: '4.3.0'
+}
+
+test {
+    useJUnitPlatform()
+}
